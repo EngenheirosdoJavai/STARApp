@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/figo/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.2/5d4eb08a326bdbd7fbbddc769666898c9936b282/MPAndroidChart-v3.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5d4eb08a326bdbd7fbbddc769666898c9936b282">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/MPAndroidChart-v3.0.2_0b1b41667fe0334904a0091f7d1d40aca567a120.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.0_0c86c282bca251143b95b994630f64c63ac2b8d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.0_eaa6b8cde64912f126c37a65e0b3b0703a6ad207.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.0_92fe1dea8100e029df7ca56eb9fb408a051a7379.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.0_7e5b0069935b48a64287d2e84cf8b31241042d26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/figo/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0_51443a24289cf6406011b8c2c865ce9aaba4a393.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.0_e92802d00c0b4b130602cd8ce76cb72d6c0bdecb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.0_4d05b8f48e207db7a3f4e127e3157515d0f51991.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/uk.co.chrisjenx/calligraphy/2.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ebcb0bcf52fab7c586f39717f7cb8de91748b1b1">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/uk.co.chrisjenx-calligraphy-2.2.0_a632e72d7560b1c0674132ef4fde2494fee0b1fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.0_271f62579cfd63ef75f1b7fa8e474932842f577c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.0_cdb88d5c5fa5c620566ddf7d426505e1dfed4ce4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.0_c93833cd6316b9c365eb0f3e08701d7bb8cb4ca2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/wasteland/AndroidStudioProjects/STARApp/STARlib/build/libs/STARlib.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a1083471a726a529a3dc5a7971a70521180d9d15">
+        <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/STARlib_3d03e968eaa544017eefff848ae961ff2b0ac71a.jar" />
+    </item>
+
+</items>
