@@ -36,8 +36,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/day_month"
                 android:textSize="16sp"
-                android:textAlignment="textEnd"
-                android:layout_weight="0.10" />
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:text="/03"

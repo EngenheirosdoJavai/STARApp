@@ -1,4 +1,4 @@
-#Tue May 09 20:59:33 BRT 2017
+#Tue May 30 17:46:50 BRT 2017
 base.0=/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

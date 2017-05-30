@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -32,7 +32,7 @@
                     android:text="Março"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
+                    android:id="@+id/monthName"
                     android:fontFamily="sans-serif"
                     android:textSize="22sp"
                     android:layout_weight="0.05"
@@ -51,7 +51,7 @@
                     android:text="17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView3"
+                    android:id="@+id/yearSufix"
                     android:layout_weight="1"
                     android:textSize="13sp" />
 
@@ -66,7 +66,7 @@
                     android:text="18,77"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView5"
+                    android:id="@+id/totalMonth"
                     android:textSize="20sp"
                     fontPath="fonts/OpenSans-Bold.ttf"/>
 
@@ -90,16 +90,22 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="15dp" />
 
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/history">
+                android:id="@+id/history_m">
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/history"></LinearLayout>
             </ScrollView>
 
         </LinearLayout>
+
     </FrameLayout>
 
-</RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

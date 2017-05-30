@@ -16,6 +16,10 @@
         "source": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ratingbar_material.xml"
     },
     {
+        "merged": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/res/merged/debug/drawable/fade_inter.xml",
+        "source": "/wasteland/AndroidStudioProjects/STARApp/app/src/main/res/drawable/fade_inter.xml"
+    },
+    {
         "merged": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
         "source": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_btn_radio_material.xml"
     },
