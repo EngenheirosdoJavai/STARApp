@@ -76,12 +76,12 @@
         "source": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/notification_bg.xml"
-    },
-    {
         "merged": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/res/merged/debug/drawable/fade_lower.xml",
         "source": "/wasteland/AndroidStudioProjects/STARApp/app/src/main/res/drawable/fade_lower.xml"
+    },
+    {
+        "merged": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",

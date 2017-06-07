@@ -141,6 +141,6 @@
     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
     <orderEntry type="library" exported="" name="support-vector-drawable-25.1.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-25.1.0" level="project" />
-    <orderEntry type="module" module-name="STARlib" exported="" />
+    <orderEntry type="module" module-name="starlib" exported="" />
   </component>
 </module>

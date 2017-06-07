@@ -1,1 +1,1 @@
-include ':app', ':STARlib'
+include ':app', ':starlib'

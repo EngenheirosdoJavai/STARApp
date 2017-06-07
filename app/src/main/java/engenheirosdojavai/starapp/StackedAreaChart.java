@@ -81,6 +81,8 @@ public class StackedAreaChart {
     }
 
     public void addDayEntry(Float g, Float e, Float w, Integer day){
+        Log.v("DayEntry", Integer.toString(day));
+
         gasEntries.add(new Entry(day, g + e +w));
         electricityEntries.add(new Entry(day, e + w));
         waterEntries.add(new Entry(day, w));
