@@ -70,7 +70,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="2db1378a847fd36c598d0710a5eb99042fb116ba">
+        sha1="116ca46d622ac98bbb9c42a4a27d509ea60976ab">
         <dex dex="/wasteland/AndroidStudioProjects/STARApp/app/build/intermediates/pre-dexed/debug/STARApp-starlib-unspecified_8b20b91fa46377457b08b1ae9ce9824d52ef2204.jar" />
     </item>
     <item

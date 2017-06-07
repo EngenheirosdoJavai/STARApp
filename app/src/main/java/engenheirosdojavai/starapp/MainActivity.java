@@ -77,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
     public class ScrollToDay{
         public ScrollToDay(){}
 
-        public void scroll(Integer d){
+        public void scroll(String d){
             LinearLayout history = (LinearLayout) findViewById(R.id.history);
 
-            View v = history.findViewWithTag(d.toString());
+            View v = history.findViewWithTag(d);
 
             scrollView.smoothScrollTo(0, Math.round(v.getY()));
         }
@@ -95,9 +95,11 @@ public class MainActivity extends AppCompatActivity {
         history.removeAllViews();
 
 
+        Integer i = 0;
+
         for(DataCollection.Day d : month.getDays().values()){
             LinearLayout historyDay = (LinearLayout) View.inflate(history.getContext(), R.layout.history_day, null);
-            historyDay.setTag(d.getDay());
+            historyDay.setTag(d.getDateOfFirstEntry().toString());
 
             ((TextView) historyDay.findViewById(R.id.day_week)).setText(d.getDayOfWeek().substring(0,3));
             ((TextView) historyDay.findViewById(R.id.day_month)).setText(d.getDay().toString());
@@ -121,8 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
             dayHistory.addView(viewDayTotal);
 
-            //chart.addDayEntry(d.getTotalCostGas(), d.getTotalCostElectricity(), d.getTotalCostWater(), d.getDay());
-            chart.addDayEntry(10f, 10f ,10f, d.getDay());
+            chart.addDayEntry(d.getTotalCostGas(), d.getTotalCostElectricity(), d.getTotalCostWater(), d.getDateOfFirstEntry());
             chart.invalidate();
         }
     }
@@ -183,90 +184,6 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             dataCollection = new DataCollection().dataCollectionBuild(response);
             populateScreen();
-
-  /*          super.onPostExecute(result);
-            //response = response.substring(1, response.length() - 1);
-
-            chart = new StackedAreaChart(findViewById(R.id.chart), getBaseContext(), new ScrollToDay());
-
-            Float totalWater = 0.0f;
-            Float totalGas = 0.0f;
-            Float totalElectricity = 0.0f;
-            float totalMonth = 0f;
-
-            try{
-                JSONObject month = new JSONObject(response);
-                JSONObject days = month.getJSONObject("days");
-                String monthName = month.getString("month");
-                String year = month.getString("year");
-
-                TextView monthNameView = (TextView) findViewById(R.id.monthName);
-                //monthNameView.setText(monthName);
-
-                TextView yearSufixView = (TextView) findViewById(R.id.yearSufix);
-                yearSufixView.setText(year.substring(2,4));
-
-                LinearLayout history = (LinearLayout) findViewById(R.id.history);
-                history.removeAllViews();
-
-                Iterator<String> keys = days.keys();
-                while(keys.hasNext()){
-                    String k = keys.next();
-
-                    LinearLayout historyDay = (LinearLayout) View.inflate(history.getContext(), R.layout.history_day, null);
-                    historyDay.setTag(k);
-
-                    ((TextView) historyDay.findViewById(R.id.day_week)).setText(days.getJSONObject(k).getString("day").substring(0,3));
-                    ((TextView) historyDay.findViewById(R.id.day_month)).setText(k.toString());
-
-                    history.addView((historyDay));
-
-                    JSONArray day = days.getJSONObject(k).getJSONArray("history");
-
-                    totalWater = 0.0f;
-                    totalElectricity = 0.0f;
-                    totalGas = 0.0f;
-
-                    LinearLayout dayHistory = ((LinearLayout) historyDay.findViewById(R.id.day_history));
-                    for (int h = 0; h < day.length(); h++){
-                        View v = View.inflate(dayHistory.getContext(), R.layout.history_entry, null);
-
-                        ((TextView) v.findViewById(R.id.domain)).setText(day.getJSONObject(h).getString("domain"));
-                        ((TextView) v.findViewById(R.id.timeInterval)).setText("(" + day.getJSONObject(h).getString("duration") + " minutos)");
-                        ((TextView) v.findViewById(R.id.cost)).setText(day.getJSONObject(h).getString("cost"));
-
-                        String t = day.getJSONObject(h).getString("type");
-                        float  vl = Float.valueOf(day.getJSONObject(h).getString("cost"));
-                        if (t.equals("water")) {
-                            totalWater += vl;
-                        }else if (t.equals("gas")){
-                            totalGas += vl;
-                        }else{
-                            totalElectricity += vl;
-                        }
-
-                        dayHistory.addView(v);
-                    }
-
-                    totalMonth += totalElectricity + totalGas + totalWater;
-
-                    LinearLayout viewDayTotal = (LinearLayout) View.inflate(dayHistory.getContext(), R.layout.history_entry_total, null);
-                    ((TextView) viewDayTotal.findViewById(R.id.totalDay)).setText( String.format("%.2f", totalElectricity + totalGas + totalWater) );
-
-                    dayHistory.addView(viewDayTotal);
-
-                    chart.addDayEntry(totalGas, totalElectricity, totalWater, Integer.valueOf(k));
-                }
-
-
-                ((TextView) findViewById(R.id.totalMonth)).setText(String.format("%.2f", totalMonth));
-
-                chart.invalidate();
-
-            }catch (org.json.JSONException e){
-                Log.w("JSONWarning", e.toString());
-            }
-            */
         }
     }
 }

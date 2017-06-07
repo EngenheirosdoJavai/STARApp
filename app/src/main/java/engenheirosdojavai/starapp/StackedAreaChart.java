@@ -10,17 +10,28 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.IValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by figo on 5/30/17.
@@ -31,6 +42,8 @@ public class StackedAreaChart {
     private MainActivity.ScrollToDay scrollToDay;
 
     private LineChart chart;
+
+    private HashMap<Integer, Date> dayMapping;
 
     private LineDataSet waterDataSet;
     private LineDataSet electricityDataSet;
@@ -63,6 +76,8 @@ public class StackedAreaChart {
         chart.setScaleEnabled(false);
 
         chart.invalidate();
+
+        dayMapping = new HashMap<>();
     }
 
     @Deprecated
@@ -80,8 +95,10 @@ public class StackedAreaChart {
         }
     }
 
-    public void addDayEntry(Float g, Float e, Float w, Integer day){
-        Log.v("DayEntry", Integer.toString(day));
+    public void addDayEntry(Float g, Float e, Float w, Date date){
+        int day = dayMapping.size();
+
+        dayMapping.put(day, date);
 
         gasEntries.add(new Entry(day, g + e +w));
         electricityEntries.add(new Entry(day, e + w));
@@ -89,7 +106,6 @@ public class StackedAreaChart {
     }
 
     public void invalidate(){
-
         electricityDataSet = new LineDataSet(electricityEntries, "Eletrecidade");
         electricityDataSet.setDrawFilled(true);
         electricityDataSet.setColor(Color.argb(0, 0, 0, 0));
@@ -123,14 +139,16 @@ public class StackedAreaChart {
         waterDataSet.setDrawValues(false);
 
         LineData lineData = new LineData();
+
         lineData.addDataSet(gasDataSet);
         lineData.addDataSet(electricityDataSet);
         lineData.addDataSet(waterDataSet);
 
-        chart.setData(lineData);
+        chart.getXAxis().setDrawLabels(false);
         chart.getLegend().setEnabled(false);
         implementGesture();
         implementValueSelectorListener();
+        chart.getXAxis().setValueFormatter(new XValueFormater());
         chart.animateY(3000);
     }
 
@@ -160,6 +178,7 @@ public class StackedAreaChart {
 
                 chart.getAxisLeft().setEnabled(showAxis);
                 chart.setHighlightPerTapEnabled(showAxis);
+                chart.getXAxis().setDrawLabels(showAxis);
             }
 
             @Override
@@ -188,7 +207,7 @@ public class StackedAreaChart {
             @Override
             public void onValueSelected(Entry e, Highlight h) {
                 //Log.v("Teste", Float.toString(e.getX()));
-                scrollToDay.scroll(Math.round(e.getX()));
+                scrollToDay.scroll(dayMapping.get(Math.round(e.getX())).toString());
             }
 
             @Override
@@ -196,6 +215,19 @@ public class StackedAreaChart {
 
             }
         });
+    }
+
+
+    public class XValueFormater implements IAxisValueFormatter {
+
+        @Override
+        public String getFormattedValue(float value, AxisBase axis) {
+            Date d = dayMapping.get(Math.round(value));
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(d);
+
+            return Integer.toString(calendar.get(Calendar.DAY_OF_MONTH));
+        }
     }
 
 }

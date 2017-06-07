@@ -5,6 +5,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Date;
 
 import static android.R.attr.data;
 import static android.R.attr.y;
@@ -123,6 +124,10 @@ public class DataCollection {
                         break;
                 }
             }
+        }
+
+        public Date getDateOfFirstEntry() {
+            return dataEntries.get(0).getDate();
         }
     }
 
